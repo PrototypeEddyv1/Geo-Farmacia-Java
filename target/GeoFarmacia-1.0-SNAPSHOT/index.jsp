@@ -13,15 +13,17 @@
     </head>
     <body>
         <h1>Hola mundo, aqui Eduardo</h1>
-        <form action="conexionMysql" method="post">
-            <label>Nombre: </label>
-            <input name="nombre">
-            <label>Apellido: </label>
-            <input name="apellido">
-            <input type="submit">
+        <form action="medicineSearch" method="get">
+            <input type="submit" value="Buscar medicinas">
         </form>
-        <form action="conexionMysql" method="get">
-            <input type="submit">
+        <form action="PharmacySearch">
+            <input type="submit" value="Buscar farmacias">
+        </form>
+        <form action="inicioSesion">
+            <input type="submit" value="Iniciar sesion">
+        </form>
+        <form action="">
+            <input type="submit" value="DEV go to screen">
         </form>
     </body>
 </html>

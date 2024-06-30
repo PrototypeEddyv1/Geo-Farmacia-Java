@@ -1,13 +1,40 @@
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\firebasePack\FirebaseInitializer.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\firebasePack\FireBaseService.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\controller\nuevapagina.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\firebasePack\FirebaseExample.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\firebasePack\Conection.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\controller\conexionMysql.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\controller\firebaseTest2.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\firebasePack\ShowDbChanges.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\models\Persona.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\controller\firebaseTest.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\com\mycompany\geofarmacia\JakartaRestConfiguration.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\controller\newServlet.java
-C:\Users\Usuario\Documents\NetBeansProjects\GeoFarmacia\src\main\java\com\mycompany\geofarmacia\resources\JakartaEE10Resource.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Pharmacy.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\PharmacyService.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\firebaseTest2.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\moduleController.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\customTags\searchInputField.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Persona.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\DirectToPharmacySearch.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\ProcessLogin.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\nuevapagina.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\serviceController.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\firebasePack\FirebaseInitializer.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\TestDatabase.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\DirectToMap.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\userController.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\UserRole.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\customTags\NavBarUser.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\User.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\conexionMysql.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\firebasePack\FirebaseExample.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\RoleModule.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\firebaseTest.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\com\mycompany\geofarmacia\resources\JakartaEE10Resource.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Product.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Role.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\newServlet.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\pharmacyController.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Service.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\goToTable.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Module.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\productTypeController.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\DirectToMedicineSearch.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\ProductService.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Type.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\DirectToLogin.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\productController.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\firebasePack\FireBaseService.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\firebasePack\ShowDbChanges.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\roleController.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\com\mycompany\geofarmacia\JakartaRestConfiguration.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\firebasePack\Conection.java
