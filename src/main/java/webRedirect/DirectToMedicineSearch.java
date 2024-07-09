@@ -4,6 +4,7 @@
  */
 package webRedirect;
 
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -11,6 +12,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
+import models.Product;
+import models.TestDatabase;
 
 /**
  *
@@ -18,7 +23,7 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "medicineSearch", urlPatterns = {"/medicineSearch"})
 public class DirectToMedicineSearch extends HttpServlet {
-
+    public static TestDatabase testdb = new TestDatabase();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -33,6 +38,29 @@ public class DirectToMedicineSearch extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            //Conseguir las medicinas
+            System.out.println("Declarando variables");
+            Map<Integer,Object> medicineList = new HashMap<Integer,Object>();
+            Map<Integer,Object> products = new HashMap<Integer,Object>();
+            Product currentP;
+            Gson gson = new Gson();
+            products = testdb.getProducts();
+            System.out.println("Products: "+products);
+            System.out.println("Products: "+products.get(1));
+            System.out.println("Usando el loop");
+            for (int i = 1; i < products.size()+1; i++){
+                System.out.println("Dato: "+i);
+                currentP = (Product) products.get(i);
+                System.out.println("Checando si dato "+currentP+" es medicina");
+                if (currentP.getId_type() > 1){
+                    System.out.println("Agregando medicina");
+                    medicineList.put(medicineList.size(),currentP);
+                }
+            }
+            System.out.println("Loop terminado, ahora agregando atributo");
+            String productsJson = gson.toJson(medicineList);
+            System.out.println(productsJson);
+            request.setAttribute("MedicineList", productsJson);
             System.out.println("Accediendo al menu de buscar farmacias");
             request.getRequestDispatcher("/busquedaMedicinas.jsp").forward(request, response);
         }

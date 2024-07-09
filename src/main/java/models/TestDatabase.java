@@ -58,7 +58,8 @@ public class TestDatabase {
 
         // Crear 10 Service
         for (int i = 1; i <= 10; i++) {
-            Service service = new Service(i, "Service " + i);
+            String[] randomNames = {"Service","Servicio","Serv"};
+            Service service = new Service(i, randomNames[random.nextInt(randomNames.length)]);
             services.put(i, service);
         }
 

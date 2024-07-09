@@ -1,6 +1,8 @@
+webRedirect\DirectToMapOld.class
 webRedirect\DirectToMedicineSearch.class
 models\TestDatabase.class
 models\ProductService.class
+webRedirect\goToResults.class
 firebasePack\FirebaseInitializer.class
 webRedirect\DirectToPharmacySearch.class
 webRedirect\goToTable.class
@@ -8,9 +10,10 @@ models\User.class
 controller\serviceController.class
 models\Module.class
 com\mycompany\geofarmacia\resources\JakartaEE10Resource.class
-webRedirect\DirectToMap.class
 models\RoleModule.class
+webRedirect\redirectToSearchForm.class
 models\Service.class
+webRedirect\goToMap.class
 firebasePack\ShowDbChanges.class
 com\mycompany\geofarmacia\JakartaRestConfiguration.class
 controller\productController.class

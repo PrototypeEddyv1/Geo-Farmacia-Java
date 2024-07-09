@@ -6,11 +6,11 @@ C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Persona.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\DirectToPharmacySearch.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\ProcessLogin.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\DirectToMapOld.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\nuevapagina.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\serviceController.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\firebasePack\FirebaseInitializer.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\TestDatabase.java
-C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\DirectToMap.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\userController.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\UserRole.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\customTags\NavBarUser.java
@@ -22,7 +22,9 @@ C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\com\mycompany\geofarmacia\resources\JakartaEE10Resource.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Product.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Role.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\goToMap.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\newServlet.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\redirectToSearchForm.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\pharmacyController.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Service.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\goToTable.java
@@ -30,6 +32,7 @@ C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\productTypeController.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\DirectToMedicineSearch.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\ProductService.java
+C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\goToResults.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\models\Type.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\webRedirect\DirectToLogin.java
 C:\Users\Usuario\Documents\tareas\Verano 2024\Taller productividad\1 - programa\Geo-Farmacia-Java\src\main\java\controller\productController.java

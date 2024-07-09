@@ -5,6 +5,10 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="models.Product"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map;"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -109,23 +113,23 @@
         }
     </style>
     <script>
-        var unselectedList = [
-            "Nombre1",
-            "Nombre2",
-            "Nombre3",
-            "Nombre4",
-            "Nombre5",
-            "Nombre6",
-            "Nombre7",
-            "Nombre8",
-            "Nombre9",
-            "Nombre10",
-            "Nombre11"
-        ]
+        //console.log(unselectedList.length)
+        var avaliableMedicineList = JSON.parse('<%= request.getAttribute("MedicineList") %>');
+        console.log("Loaded medicine",avaliableMedicineList);
+        var unselectedList
+        var unselectedListIds
+        unselectedList = new Array(Object.keys(avaliableMedicineList).length)
+        unselectedListIds = new Array(Object.keys(avaliableMedicineList).length)
+        for (var key in avaliableMedicineList) {
+            if (avaliableMedicineList.hasOwnProperty(key)) {
+                unselectedList[key] = avaliableMedicineList[key].name
+                unselectedListIds[key] = avaliableMedicineList[key].id_product
+            }
+        }
         //Add the unselectedList of selected
         for (var i = 0; i < unselectedList.length; i++){
             var inp
-            setClassId = i+"unselected"
+            setClassId = unselectedListIds[i]+"unselected"
             //Create div
             di = document.createElement('div');
             di.setAttribute("class","wrap-flex listItem")
@@ -148,9 +152,9 @@
         }
         //Add to the selected
         function changeSelectLists(event){
-            
             //console.log(event.target.id)
             idString = event.target.id
+            console.log(event.target)
             idNum = ""
             for(i = 0; i < idString.length; i++){
                 const char = idString.charAt(i);
@@ -158,6 +162,8 @@
                     idNum += char
                 }
             }
+            console.log("unselected:"+idString)
+            console.log("unselected:"+idNum)
             if (event.target.checked == true){
                 setClassId = idNum+"selected"
                 //Create div
@@ -173,7 +179,13 @@
                 
                 //Create label
                 lab = document.createElement('label');
-                lab.innerHTML = unselectedList[idNum]
+                for (var key in avaliableMedicineList) {
+                    if (avaliableMedicineList.hasOwnProperty(key)) {
+                        if (avaliableMedicineList[key].id_product == idNum){
+                            lab.innerHTML = avaliableMedicineList[key].name
+                        }
+                    }
+                }
                 lab.setAttribute("for",setClassId)
                 lab.setAttribute("class",setClassId+"Label")
                 //Append thing
