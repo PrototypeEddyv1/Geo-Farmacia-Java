@@ -51,17 +51,17 @@ El programa no permite el uso de firebase
 / (Principal): donde habran las opciones de buscar farmacias por cierto dato o buscar directamente la mas cercana
 
 ## Enlaces
-- /SearchByName: Permite buscar farmacias por nombre de farmacia
-- /searchByMedicine: Permite buscar farmacias por nombre del medicamente
-- /searchByService: Permite buscar farmacias por nombre de un servicio (dropdown)
-- /searchMap?serviceName=() Despliega una tabla con las farmacias encontradas, dependiendo si se llamo desde searchByName, Service, o medicine, filtrara por aquellos resultados, tambien se llega directamente si se selecciono buscar mas cercanas
-- /inicioSesion: Permite al usuario ingresar, usuario y contraseña
-- /ProcessLogin: Despues de inicio de sesion, revisara datos y despues ira al menu de - administracion si sesion es correcta
-- /farmacias: Es el controller de farmacias, method sirve para el metodo, si no hay, desplegar tabla
-- /servicios: Es el controller de servicios, method sirve para el metodo, si no hay, desplegar tabla
-- /productos: Es el controller de productos, method sirve para el metodo, si no hay, desplegar tabla
-- /tipoProductos: Es el controller de tipo de productos, method sirve para el metodo, si no hay, desplegar tabla
-- /usuarios: Es el controller de usuarios, method sirve para el metodo, si no hay, desplegar tabla
-- /roles: Es el controller de roles de usuario, method sirve para el metodo, si no hay, desplegar tabla
-- /modulos: Es el controller de modulos, method sirve para el metodo, si no hay, desplegar tabla
+- **/SearchByName**: Permite buscar farmacias por nombre de farmacia
+- **/searchByMedicine:** Permite buscar farmacias por nombre del medicamente
+- **/searchByService:** Permite buscar farmacias por nombre de un servicio (dropdown)
+- **/searchMap?serviceName=():** Despliega una tabla con las farmacias encontradas, dependiendo si se llamo desde searchByName, Service, o medicine, filtrara por aquellos resultados, tambien se llega directamente si se selecciono buscar mas cercanas
+- **/inicioSesion:** Permite al usuario ingresar, usuario y contraseña
+- **/ProcessLogin:** Despues de inicio de sesion, revisara datos y despues ira al menu de - administracion si sesion es correcta
+- **/farmacias:** Es el controller de farmacias, method sirve para el metodo, si no hay, desplegar tabla
+- **/servicios:** Es el controller de servicios, method sirve para el metodo, si no hay, desplegar tabla
+- **/productos:** Es el controller de productos, method sirve para el metodo, si no hay, desplegar tabla
+- **/tipoProductos:** Es el controller de tipo de productos, method sirve para el metodo, si no hay, desplegar tabla
+- **/usuarios:** Es el controller de usuarios, method sirve para el metodo, si no hay, desplegar tabla
+- **/roles:** Es el controller de roles de usuario, method sirve para el metodo, si no hay, desplegar tabla
+- **/modulos:** Es el controller de modulos, method sirve para el metodo, si no hay, desplegar tabla
 
