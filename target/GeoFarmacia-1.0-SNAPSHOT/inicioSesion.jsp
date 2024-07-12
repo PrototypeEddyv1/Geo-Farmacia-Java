@@ -25,7 +25,7 @@
                 </tr>
                 <tr>
                     <td>Contraseña</td>
-                    <td><input name="password" placeholder="Constraseña"></td>
+                    <td><input type="password" name="password" placeholder="Constraseña"></td>
                 </tr>
             </table>
             <input type="submit" value="Iniciar sesion">

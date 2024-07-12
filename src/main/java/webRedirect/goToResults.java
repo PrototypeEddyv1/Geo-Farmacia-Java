@@ -4,6 +4,7 @@
  */
 package webRedirect;
 
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -25,6 +26,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -58,6 +62,7 @@ public class goToResults extends HttpServlet {
             Map<Integer,Object> pharmacyServiceList = testdb.getPharmacyServices();
             Map<Integer,Object> serviceList = testdb.getServices();
             Map<Integer,Object> productList = testdb.getProducts();
+            String urlString = "";
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -71,8 +76,12 @@ public class goToResults extends HttpServlet {
             System.out.println("Name: "+pharmacyName);
             System.out.println("Medicine: "+pharmacyMedicine);
             System.out.println("Service: "+serviceName);
+            //Conexion a apis
+            String ip = "IP Adress";
+            urlString = "http://192.168.100.7/geofarmaciasAPI/api_comands/get_all_pharmacies.php";
             //Search by name of pharmacy
             if (pharmacyName != null){
+                urlString = "http://192.168.100.7/geofarmaciasAPI/api_comands/get_pharmacies_by_name.php?name="+pharmacyName;
                 /*
                 System.out.println("---BUSCANDO POR NOMBRE---");
                 Map<Integer,Object> filteredPharmacies = pharmaciesList.entrySet()
@@ -86,6 +95,7 @@ public class goToResults extends HttpServlet {
                         return false;
                     })
                     .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));*/
+                /*
                 query = "SELECT DISTINCT\n" +
                 "                p.id_pharmacy, \n" +
                 "                p.name, \n" +
@@ -101,10 +111,12 @@ public class goToResults extends HttpServlet {
                 "                JOIN services s ON ps.id_service = s.id_service \n" +
                 "                JOIN productServices pr ON s.id_service = pr.id_service \n" +
                 "                JOIN products prd ON pr.id_product = prd.id_product \n" +
-                "            WHERE p.name like '%"+pharmacyName+"%'";
+                "            WHERE p.name like '%"+pharmacyName+"%'";*/
             }
             //Search by medicine name
-            if (pharmacyMedicine != null){/*
+            if (pharmacyMedicine != null){
+                urlString = "http://192.168.100.7/geofarmaciasAPI/api_comands/get_pharmacies_by_medicine_name.php?name="+pharmacyMedicine;
+                /*
                 System.out.println("---BUSCANDO POR MEDICINA---");
                 //Filter products by the name implemented
                 Map<Integer,Object> filteredMedicine = productList.entrySet()
@@ -151,6 +163,7 @@ public class goToResults extends HttpServlet {
                         return false;
                     })
                     .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));*/
+                /*
                 query = "SELECT DISTINCT \n" +
                 "                p.id_pharmacy, \n" +
                 "                p.name, \n" +
@@ -166,10 +179,12 @@ public class goToResults extends HttpServlet {
                 "                JOIN services s ON ps.id_service = s.id_service \n" +
                 "                JOIN productServices pr ON s.id_service = pr.id_service \n" +
                 "                JOIN products prd ON pr.id_product = prd.id_product \n" +
-                "            WHERE prd.name like '%"+pharmacyMedicine+"%'";
+                "            WHERE prd.name like '%"+pharmacyMedicine+"%'";*/
             }
             //Search by service name
-            if (serviceName != null){/*
+            if (serviceName != null){
+                urlString = "http://192.168.100.7/geofarmaciasAPI/api_comands/get_pharmacies_by_service_name.php?name="+serviceName;
+                /*
                 System.out.println("---BUSCANDO POR SERVICIO---");
                 //Filter services by the name implemented
                 Map<Integer,Object> filteredService = serviceList.entrySet()
@@ -217,6 +232,7 @@ public class goToResults extends HttpServlet {
                         return false;
                     })
                     .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));*/
+                /*
                 query = "SELECT DISTINCT \n" +
                 "                p.id_pharmacy, \n" +
                 "                p.name, \n" +
@@ -232,7 +248,7 @@ public class goToResults extends HttpServlet {
                 "                JOIN services s ON ps.id_service = s.id_service \n" +
                 "                JOIN productServices pr ON s.id_service = pr.id_service \n" +
                 "                JOIN products prd ON pr.id_product = prd.id_product \n" +
-                "            WHERE s.name like '%"+serviceName+"%'";
+                "            WHERE s.name like '%"+serviceName+"%'";*/
             }
             /*
             SQL TO HAVE PHARMACY WITH PRODUCT NAME
@@ -258,6 +274,7 @@ public class goToResults extends HttpServlet {
             WHERE prd.name like '%Medicina%';
             */
             //Make a SQL query request
+            /*
             String jdbcUrl = "jdbc:mysql://localhost/geofarmaciadb";
             String jdbcUser = "root";
             String jdbcPassword = "";
@@ -310,6 +327,41 @@ public class goToResults extends HttpServlet {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
+            }*/
+            try{
+                URL url = new URL(urlString.replace(" ","%20"));
+                System.out.println("URL: "+url);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("GET");
+                
+                conn.connect();
+                
+                int responseCode = conn.getResponseCode();
+                String resultResponse = "";
+                if(responseCode == 200){
+                    Scanner scanner = new Scanner(url.openStream());
+                    int contador = 0;
+                    Gson gson = new Gson();
+                    
+                    while(scanner.hasNext()){
+                        contador += 1;
+                        //JsonObject jsonObject = new JsonObject();
+                        resultResponse = scanner.nextLine();
+                        jsonArray = gson.fromJson(resultResponse, JsonArray.class); 
+                        if (!resultResponse.isEmpty()){
+                            System.out.println("Se recogio el dato"+contador+": "+resultResponse);
+                            for (int i = 0; i < jsonArray.size(); i++){
+                                System.out.println("Dato: "+jsonArray.get(i));
+                            }
+                        }
+                        
+                    }
+                    scanner.close();
+                }else{
+                    System.out.println("No se encontro la base de datos, codigo: "+responseCode);
+                }
+            }catch(Exception e){
+                
             }
             request.setAttribute("pharmaciesList", jsonArray);
             request.getRequestDispatcher("/folderSearch/pharmacyTableResults.jsp").forward(request, response);

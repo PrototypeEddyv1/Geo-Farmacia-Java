@@ -17,18 +17,19 @@
             <input type="submit" value="Regresar">
         </form>
         <form action="searchMap">
+            <!--
             <label for="serviceNameInput">Nombre del servicio</label>
             <br>
-            <input id="serviceNameInput" type="text" name="serviceName">
-            <label for="comboBox">Choose an option:</label>
-            <select id="comboBox" name="comboBox">
-                <option value="option1">Farmacia</option>
-                <option value="option2">Panaderia</option>
-                <option value="option3">Abarrotes</option>
-                <option value="option4">Fotografias</option>
-                <option value="option5">Carnes frias</option>
-                <option value="option6">Bebidas</option>
-                <option value="option7">Consultorio medico</option>
+            <input id="serviceNameInput" type="text" >
+            -->
+            <label for="comboBox">Nombre del servicio:</label>
+            <select id="comboBox" name="serviceName">
+                <option value="Farmacia">Farmacia</option>
+                <option value="Panaderia">Panaderia</option>
+                <option value="Fotografias">Fotografias</option>
+                <option value="Abarrotes">Abarrotes</option>
+                <option value="Medico">Medico</option>
+                <option value="vinos y licores">vinos y licores</option>
             </select>
             <script>
                 // JavaScript to handle the change event

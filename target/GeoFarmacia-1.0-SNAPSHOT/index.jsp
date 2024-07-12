@@ -22,7 +22,7 @@
             </form>
         -->
         <h3>Buscar farmacias</h3>
-        <form action="">
+        <form action="searchMap">
             <input type="submit" value="Buscar farmacia mas cercana">
         </form>
         <form action="searchByName">

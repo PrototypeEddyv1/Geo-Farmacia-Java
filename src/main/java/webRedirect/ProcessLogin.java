@@ -4,6 +4,9 @@
  */
 package webRedirect;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -11,8 +14,15 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 import models.TestDatabase;
 import models.User;
 
@@ -39,6 +49,8 @@ public class ProcessLogin extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
        
         try (PrintWriter out = response.getWriter()) {
+            JsonArray jsonArray = new JsonArray();
+            String resultResponse = "";
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -49,6 +61,37 @@ public class ProcessLogin extends HttpServlet {
             out.println("<h1>Datos incorrectos</h1>");
              //Get username equals
              correctData = false;
+             //Conexion a la api
+            String ip = "IP Adress";
+            URL url = new URL("http://"+ip+"/geofarmaciasAPI/api_comands/authenticate_user.php");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
+            conn.setDoOutput(true);
+            conn.setRequestProperty("Content-Type", "application/json; utf-8");
+            conn.setRequestProperty("Accept", "application/json");
+            String userData = "{\"name\":\""+request.getParameter("username")+"\", \"pass\":\""+request.getParameter("password")+"\"}";
+            try(OutputStream os = conn.getOutputStream()) {
+                byte[] input = userData.getBytes("utf-8");
+                os.write(input, 0, input.length);
+            }
+            //To get the response from the builder (get the status of the authentication)
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"))) {
+            StringBuilder responseBuilder = new StringBuilder();
+            String responseLine;
+            while ((responseLine = br.readLine()) != null) {
+                responseBuilder.append(responseLine.trim());
+            }
+            System.out.println("Response: " + responseBuilder.toString());
+            Gson gson = new Gson();
+            
+            JsonObject jsonObject = gson.fromJson(responseBuilder.toString(), JsonObject.class);
+            String statusAuth = jsonObject.get("status").toString();
+            System.out.println("status: "+statusAuth);
+            if (statusAuth.equals("\"Successful\"")){
+                correctData = true;
+            }
+}
+             /*
              for (int i = 0; i < testdb.getUsers().size(); i++){
                  User user = (User) testdb.getUsers().values().toArray()[i];
                  out.println("<p> User: "+user.getName()+"="+request.getParameter("username")+"</p>");
@@ -59,7 +102,7 @@ public class ProcessLogin extends HttpServlet {
                          correctData = true;
                      }
                  }
-             }
+             }*/
             out.println("</body>");
             out.println("</html>");
             if (correctData == true){
